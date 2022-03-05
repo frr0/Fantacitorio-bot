@@ -1,5 +1,4 @@
-# Fantacitorio-bot
-## Fantacitorio Telegram bot
+# Fantacitorio Telegram bot
 
 Dovevo imparare a usare python e ho pensato di fare questo bot. La qualità di questo codice è decisamente scarsa, ma funziona (solo per la nostra fantalega, se qualcun altro volesse utilizzarlo dovrebbe clonarlo e creare un nuovo bot, a meno che non modifichi questo).
 
