@@ -5,6 +5,10 @@ __pycache__/
 
 # file to be ignored
 f.py
+classifica.txt
+onesto.txt
+pap.txt
+ppb.txt
 
 # C extensions
 *.so
