@@ -4,6 +4,8 @@ from telegram.ext.callbackcontext import CallbackContext
 from telegram.ext.commandhandler import CommandHandler
 from telegram.ext.messagehandler import MessageHandler
 from telegram.ext.filters import Filters
+from telegram import KeyboardButton, ReplyKeyboardMarkup
+import requests
 
 import json
 import f
@@ -18,9 +20,15 @@ PPB = 'ppb.txt'
 PUNTI = 'punteggio.txt'
 CLASSIFICA = 'classifica.txt'
 
+t1 = "/onesto"
+t2 = "/pap"
+t3 = "/ppb"
+t5 = "/punti"
+t4 = "/classifica"
+
 def start(update: Update, context: CallbackContext):
-    update.message.reply_text(
-        "Ciao, Benvenuto nel bot non ufficiale del fantacitorio. Scrivi help per vedere tutti i comandi.")
+    buttons = [[KeyboardButton(t1)], [KeyboardButton(t2)], [KeyboardButton(t3)], [KeyboardButton(t4)], [KeyboardButton(t5)]]
+    context.bot.send_message(chat_id=update.effective_chat.id, text="Ciao, Benvenuto nel bot non ufficiale del fantacitorio. Scrivi /help per vedere tutti i comandi.", reply_markup=ReplyKeyboardMarkup(buttons))
 
 def help(update: Update, context: CallbackContext):
     update.message.reply_text("""Available Commands :
