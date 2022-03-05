@@ -1,0 +1,30 @@
+Matteo Ricci,500
+Enrico Letta,50
+Carlo Calenda,65
+Matteo Renzi,50
+Marta Fascina,30
+Silvio Berlusconi,70
+Marta Fascina,90
+Adriano Galliani,100
+Silvio Berlusconi,100
+Marta Fascina,80
+Silvio Berlusconi,150
+Marta Fascina,200
+Adriano Galliani,50
+Silvio Berlusconi,40
+Daniela Santanche,50
+Mara Carfagna,30
+Nicola Zingaretti,200
+Enrico Letta,40
+Attilio Fontana,30
+Luca Zaia,50
+Gianluigi Paragone,30
+Ignazio La Russia,30
+Matteo Salvini,1000
+Ugo Cappellacci,450
+Luigi Di Maio,100
+Laura Ravetto,50
+Danilo Toninelli,150
+Luca Zaia,50
+Roberto Gualtieri,85
+Roberta Ferrero,20
