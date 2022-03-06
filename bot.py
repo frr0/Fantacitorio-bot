@@ -86,6 +86,9 @@ def ppbb(update: Update, context: CallbackContext):
     update.message.reply_text(ppb_1)
 
 def puntii(update: Update, context: CallbackContext):
+    # o_pol_1 = dict_or_OrdDict_to_formatted_str(o_pol)
+    # o_pol_2 = (str(o_pol_1).replace("\"", "").replace(",", "").replace("{","").replace("}", "").replace("'", "").replace(",", "\n").replace("punti", "").replace(":", " "))
+    # update.message.reply_text(o_pol_2)
     punti_1 = " "+(str(punti).replace("{","").replace("}", "").replace("'", "").replace(",", "\n").replace("punti", "").replace(":", " "))
     update.message.reply_text(punti_1)
 
@@ -140,10 +143,13 @@ file = open(PUNTI, 'r')
 for line in file:
     campi = line.rstrip().split(',')
     nome = campi[0]
-    p = {
-        'punti': int(campi[1])
-    }
-    punti[nome] = p
+    if nome in punti:
+        punti[nome]['punti'] = int(punti[nome]['punti']) + int(campi[1])
+    else:
+        p = {
+            'punti': int(campi[1])
+        }
+        punti[nome] = p
 file.close()
 
 classifica = {}
@@ -170,6 +176,7 @@ for politico in punti:
             classifica.update({"PPB": punti_ppb})
 
 res = OrderedDict(reversed(list(classifica.items())))
+# o_pol = OrderedDict(reversed(list(punti.items())))
 
 f.updater.dispatcher.add_handler(CommandHandler('start', start))
 f.updater.dispatcher.add_handler(CommandHandler('onesto', onestoo))
