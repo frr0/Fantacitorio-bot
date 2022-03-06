@@ -19,6 +19,7 @@ Enrico Letta,40
 Attilio Fontana,30
 Luca Zaia,50
 Gianluigi Paragone,30
+Giorgia Meloni,50
 Ignazio La Russa,30
 Matteo Salvini,1000
 Ugo Cappellacci,450
