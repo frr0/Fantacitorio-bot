@@ -6,9 +6,9 @@ __pycache__/
 # file to be ignored
 f.py
 classifica.txt
-#onesto.txt
-#pap.txt
-#ppb.txt
+onesto.txt
+pap.txt
+ppb.txt
 punteggio1.txt
 
 # C extensions
