@@ -30,3 +30,13 @@ Luca Zaia,50
 Roberto Gualtieri,85
 Roberta Ferrero,20
 Giorgia Meloni,40
+Matteo Salvini,-49
+Sara Cunial,100
+Federica Zanella,50
+Claudio Borghi,100
+Gregorio Fontana,60
+Edmondo Cirielli,60
+Francesco D'Uva,60
+Dario Nardella,50
+Carlo Calenda,100
+Maurizio Gasparri,40
