@@ -31,7 +31,7 @@ Roberto Gualtieri,85
 Roberta Ferrero,20
 Giorgia Meloni,40
 Matteo Salvini,-49
-Sara Cunial,100
+Sara Cunial,110
 Federica Zanella,50
 Claudio Borghi,100
 Gregorio Fontana,60
