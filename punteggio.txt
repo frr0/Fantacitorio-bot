@@ -40,3 +40,13 @@ Francesco D'Uva,60
 Dario Nardella,50
 Carlo Calenda,100
 Maurizio Gasparri,40
+Luca Zaia,100
+Elio Vito,40
+Lannutti,70
+Morra,70
+Lezzi,70
+Manilo Di Stefano,35
+Carlo Sibilia,40
+Enrico Letta,50
+Attilio Fontana,50
+Daniela Santanche,50
