@@ -49,7 +49,7 @@ Manilo Di Stefano,35
 Carlo Sibilia,40
 Enrico Letta,50
 Attilio Fontana,50
-Dall'Osso Matteo,50
+Dall Osso Matteo,50
 Fratoianni Nicola,50
 Stumpo Ni1cola,50
 Cabras Pino,50
