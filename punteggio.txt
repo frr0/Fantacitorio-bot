@@ -81,3 +81,16 @@ Roberto Gualtieri,40
 Stefano Bonaccini,40
 Matteo Orfini,40
 Filippo Sensi,45
+Giuseppe Conte,75
+Giorgia Meloni,200
+Maria Elena Boschi,77
+Carlo Calenda,55
+Renato Brunetta,15
+Daniela Santanche,50
+Matteo Renzi,82
+Luciano Nobili,20
+Paola Taverna,20
+Simone Pillon,53
+Filippo Saltamartini,50
+Marta Fascina,700
+Silvio Berlusconi,700
