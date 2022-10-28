@@ -8,3 +8,7 @@ Il programma legge le squadre da tre diversi file.txt, legge `punteggio.txt` con
 
 ## To Do
 - far si che funzioni per qualsiasi fantalega e qualsiasi squadra singola
+
+```
+snscrape --jsonl --progress --max-results 4 twitter-search "from:Fanta_citorio" > tweets.json && cat tweets.json | jq '.content' > data.txt
+```
