@@ -1,6 +1,6 @@
 # Fantacitorio Telegram bot
 
-@fantacitorio_bot
+[@fantacitorio_bot](https://t.me/fantacitorio_bot)
 
 Unofficial Telegram bot made for television game.
 
