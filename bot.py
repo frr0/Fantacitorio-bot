@@ -75,17 +75,17 @@ def help(update: Update, context: CallbackContext):
     /punti      - tutti i politici""")
 
 def _team1(update: Update, context: CallbackContext):
-    team1_1 = " "+(str(team1).replace("{","").replace("}", "").replace("'", "").replace(",", "\n").replace("prezzo", "").replace(":", " "))
+    team1_1 = "Team 1\n\n "+(str(team1).replace("{","").replace("}", "").replace("'", "").replace(",", "\n").replace("prezzo", "").replace(":", " "))
     # bot.sendPhoto(chat_id, photo=open('/home/fra/projects/Fantacitorio-bot/team1.jpg', 'rb'))
     update.message.reply_text(team1_1)
 
 def _team2(update: Update, context: CallbackContext):
-    team2_1 = " "+(str(team2).replace("{","").replace("}", "").replace("'", "").replace(",", "\n").replace("prezzo", "").replace(":", " "))
+    team2_1 = "Team 2\n\n "+(str(team2).replace("{","").replace("}", "").replace("'", "").replace(",", "\n").replace("prezzo", "").replace(":", " "))
     # bot.sendPhoto(chat_id, photo=open('/home/fra/projects/Fantacitorio-bot/team2.jpg', 'rb'))
     update.message.reply_text(team2_1)
 
 def _team3(update: Update, context: CallbackContext):
-    team3_1 = " "+(str(team3).replace("{","").replace("}", "").replace("'", "").replace(",", "\n").replace("prezzo", "").replace(":", " "))
+    team3_1 = "Team 3\n\n "+(str(team3).replace("{","").replace("}", "").replace("'", "").replace(",", "\n").replace("prezzo", "").replace(":", " "))
     # bot.sendPhoto(chat_id, photo=open('/home/fra/projects/Fantacitorio-bot/team3.jpg', 'rb'))
     update.message.reply_text(team3_1)
 
@@ -93,13 +93,13 @@ def _punti(update: Update, context: CallbackContext):
     # o_pol_1 = dict_or_OrdDict_to_formatted_str(o_pol)
     # o_pol_2 = (str(o_pol_1).replace("\"", "").replace(",", "").replace("{","").replace("}", "").replace("'", "").replace(",", "\n").replace("punti", "").replace(":", " "))
     # update.message.reply_text(o_pol_2)
-    punti_1 = " "+(str(punti).replace("{","").replace("}", "").replace("'", "").replace(",", "\n").replace("punti", "").replace(":", " "))
+    punti_1 = "Punteggio per politico\n\n "+(str(punti).replace("{","").replace("}", "").replace("'", "").replace(",", "\n").replace("punti", "").replace(":", " "))
     update.message.reply_text(punti_1)
 
 def _classifica(update: Update, context: CallbackContext):
     os.system("snscrape --jsonl --progress --max-results 200 twitter-search \"from:Fanta_citorio\" > tweets.json && cat tweets.json | jq '.content' > data.txt")
     res_1 = dict_or_OrdDict_to_formatted_str(res)
-    res_2 = (str(res_1).replace("\"", "").replace(",", ""))
+    res_2 = "Classifica \n\n" + (str(res_1).replace("\"", "").replace(",", ""))
     update.message.reply_text(res_2)
 
 def unknown(update: Update, context: CallbackContext):
@@ -146,13 +146,16 @@ file.close()
 punti = {}
 file = open(PUNTI, 'r')
 for line in file:
+    if line == '"@rasquelto No."\n':
+        break
+    line = line.replace('  ', ' ')
     campi_dati = line.rstrip().split(' ')
     if campi_dati[1] == 'PUNTI':
-        nome = campi_dati[4]
-        if nome == 'SQUADRE:':
-            break
+        nome = campi_dati[4] + campi_dati[5]
         campi = nome.split('\\')
         nome = campi[0]
+        if nome == 'SQUADRE:':
+            break
         campi_dati = campi_dati[0].split('"')
         if nome in punti:
             punti[nome]['punti'] = int(punti[nome]['punti']) + int(campi_dati[1])
@@ -162,7 +165,8 @@ for line in file:
             }
             punti[nome] = p
     elif campi_dati[2] == 'PUNTI':
-        nome = campi_dati[5]
+        # nome = campi_dati[5]
+        nome = campi_dati[5] + campi_dati[6]
         campi = nome.split('\\')
         nome = campi[0]
         campi_dati = campi_dati[1].split('"')
